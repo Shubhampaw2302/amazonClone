@@ -1,0 +1,49 @@
+.payment {
+    background-color: white;
+}
+
+.payment_container > h1 {
+    text-align: center;
+    padding: 10px;
+    font-weight: 400;
+    background-color: rgb(234, 237, 237);
+    border-bottom: 1px solid lightgray;
+}
+
+.payment_container > h1 a {
+    text-decoration: none;
+}
+
+.payment_section {
+    display: flex;
+    padding: 20px;
+    margin: 0 20px;
+    border-bottom: 1px solid lightgray;
+}
+
+.payment_title {
+    flex: 0.2;          /* The display of payment-section is flex. And payment_title should occupy 20% of the flexbox */
+}
+
+.payment_address, .payment_items, .payment_details {
+    flex: 0.8;          /* rest 80% is occupied by the address or any other element present */
+}
+
+@media (max-width: 900px) {
+    .payment_items, .payment_details {
+        margin-left: 20px;
+    }
+
+    .payment_items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .payment_section {
+        flex-direction: column;
+    }
+
+    .payment_bill {
+        margin: 15px;
+    }
+}
